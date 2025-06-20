@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sharukeshwar P • Portfolio</title>
-  <link rel="stylesheet" 
+  <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css" />
   <style>
-    /* Inline tweaks */
-    header h1 { font-size: 2.5rem; }
-    header .tagline { font-size: 1.2rem; }
-    section { margin-top: 2rem; }
-    .contact a { margin-right: 1rem; }
-    .card { margin-bottom: 1rem; }
+    header .tagline { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    section { margin: 3rem auto; max-width: 800px; }
+    .section-title {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .section-title h2 {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      font-size: 1.4rem;
+    }
+    .section-title .cs-hr {
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 20px);
+      width: 200px;
+    }
+    .card {
+      padding: 1rem;
+      border: 2px solid #222;
+      margin-bottom: 1rem;
+    }
+    .contact a { margin-right: 1rem; text-decoration: none; }
+    footer { margin: 4rem auto; text-align: center; }
   </style>
 </head>
 <body>
@@ -20,108 +40,129 @@
   <!-- Header -->
   <header class="container padded text-center">
     <h1>Sharukeshwar P</h1>
-    <p class="tagline subtle">Software Engineer | AI &amp; Automation</p>
+    <p class="tagline subtle">Software Engineer | AI & Automation</p>
     <div class="contact">
-      <a href="mailto:220701265@rajalakshmi.edu.in">✉️ 220701265@rajalakshmi.edu.in</a>
-      <a href="tel:+919361070552">📞 +91-9361070552</a>
+      <a href="mailto:220701265@rajalakshmi.edu.in" class="cs-btn">Email Me</a>
+      <a href="tel:+919361070552" class="cs-btn">Call Me</a>
     </div>
   </header>
 
   <!-- About -->
-  <section class="container padded">
-    <h2>About Me</h2>
-    <p>Driven software developer with a passion for automating workflows and crafting AI-powered solutions. I believe in "coding the future, one automation at a time."</p>
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <hr class="cs-hr"/>
+    </div>
+    <p>Driven software developer crafting AI-powered solutions & automations. I build “bots that build bots,” streamlining workflows in innovative ways.</p>
   </section>
 
   <!-- Skills -->
-  <section class="container padded">
-    <h2>Technical Skills</h2>
-    <ul class="columns-2">
-      <li>Robotic Process Automation (UiPath)</li>
-      <li>Model Context Protocol (MCP)</li>
-      <li>Agentic Artificial Intelligence</li>
-      <li>Google Cloud Platform</li>
-      <li>n8n Workflow Automation</li>
-      <li>OOP in Java</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Charismatic Leadership</li>
-      <li>Articulate Communication</li>
-    </ul>
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <hr class="cs-hr"/>
+    </div>
+    <div class="columns-2">
+      <h3>Technical</h3>
+      <ul>
+        <li>UiPath (RPA)</li>
+        <li>Model Context Protocol (MCP)</li>
+        <li>Agentic AI</li>
+        <li>Google Cloud</li>
+        <li>n8n Automation</li>
+        <li>Java (OOP)</li>
+      </ul>
+      <h3>Soft</h3>
+      <ul>
+        <li>Charismatic Leadership</li>
+        <li>Articulate Communication</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section class="container padded">
-    <h2>Key Projects</h2>
+  <section id="projects">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <hr class="cs-hr"/>
+    </div>
     <div class="card">
       <h3>SocialScrape</h3>
-      <p>Smart India Hackathon 2024: Created a data-scraping tool for suspect sentiment analysis, achieving <strong>85% accuracy</strong> to streamline investigations.</p>
+      <p>SIH 2024: Built a sentiment analysis scraper (85% accuracy) aiding investigations.</p>
     </div>
     <div class="card">
-      <h3>APharm-Kiosk</h3>
-      <p>Powered by MCP: Automated Canva design tasks via UiPath, cutting manual effort by <strong>40%</strong>.</p>
+      <h3>APharm‑Kiosk</h3>
+      <p>MCP + UiPath → 40% reduction in manual Canva design tasks.</p>
     </div>
     <div class="card">
-      <h3>AI-Powered Pharmacy for the Elderly</h3>
-      <p>Built an elderly-friendly pharmacy interface with seamless MCP integration for intuitive use.</p>
+      <h3>AI‑Powered Pharmacy</h3>
+      <p>User‑friendly pharmacy interface tailored for elderly users, integrated with MCP.</p>
     </div>
     <div class="card">
       <h3>Pixel Pilot</h3>
-      <p>Streamlined UI automation in Canva using UiPath, boosting design workflow efficiency.</p>
+      <p>UiPath-driven Canva UI automation, streamlining design workflows.</p>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="container padded">
-    <h2>Work Experience</h2>
+  <section id="experience">
+    <div class="section-title">
+      <h2>Experience</h2>
+      <hr class="cs-hr"/>
+    </div>
     <div class="card">
-      <h3>Graphic Designer &amp; Bot Developer • Uiphoria REC</h3>
-      <p><em>Oct 2023 – Sept 2024</em></p>
+      <h3>Graphic Designer & Bot Developer – Uiphoria REC</h3>
+      <p><em>Oct 2023 – Sep 2024</em></p>
       <ul>
-        <li>Automated design, certification &amp; document-workflow bots.</li>
-        <li>Led UiPath automation workshops for 50+ non-CS students.</li>
+        <li>Automated design, certifications & document workflows via bots.</li>
+        <li>Conducted UiPath workshops for 50+ non‑CS students.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Co-Organizer • Google Developer Groups REC</h3>
-      <p><em>Sept 2024 – Present</em></p>
+      <h3>Co‑Organizer – GDG REC</h3>
+      <p><em>Sep 2024 – Present</em></p>
       <ul>
-        <li>Organized “Bit N’ Build’24,” an international hackathon across Tamil Nadu.</li>
-        <li>Helped launch Women Tech Makers REC, empowering women in tech.</li>
+        <li>Organized “Bit N’ Build’24,” a TN-wide hackathon.</li>
+        <li>Founded Women Tech Makers REC chapter.</li>
       </ul>
     </div>
   </section>
 
   <!-- Education -->
-  <section class="container padded">
-    <h2>Education</h2>
+  <section id="education">
+    <div class="section-title">
+      <h2>Education</h2>
+      <hr class="cs-hr"/>
+    </div>
     <div class="card">
-      <h3>B.E. in Computer Science &amp; Engineering</h3>
-      <p>Rajalakshmi Engineering College, Chennai<br/>
-         <em>Nov 2022 – May 2026</em> • CGPA 8.67</p>
+      <h3>B.E. in CSE</h3>
+      <p>Rajalakshmi Engineering College, Chennai<br/><em>Nov 2022 – May 2026 • CGPA 8.67</em></p>
     </div>
     <div class="card">
       <h3>Senior Secondary (CBSE)</h3>
-      <p>Kendriya Vidyalaya, Island Grounds, Chennai<br/>
-         <em>Apr 2020 – Mar 2022</em> • 96.0% (Top 0.01% India)</p>
+      <p>Kendriya Vidyalaya, Island Grounds<br/><em>Apr 2020 – Mar 2022 • 96.0% (Top 0.01% India)</em></p>
     </div>
   </section>
 
-  <!-- Accomplishments -->
-  <section class="container padded">
-    <h2>Accomplishments</h2>
+  <!-- Achievements -->
+  <section id="achievements">
+    <div class="section-title">
+      <h2>Achievements</h2>
+      <hr class="cs-hr"/>
+    </div>
     <ul>
-      <li>🏆 Top 50 Team, Smart India Hackathon 2024</li>
-      <li>🎓 Organized &amp; completed Google Cloud’s Gen AI Cohort</li>
-      <li>🌐 Co-initiated GitRecQuest’24 (inter-college open-source event)</li>
+      <li>🏆 Top 50 Team, Smart India Hackathon 2024</li>
+      <li>🎓 Completed Google Cloud’s Gen AI Cohort</li>
+      <li>🌐 Co‑initiated GitRecQuest’24 with Intellexa REC & GDG REC</li>
     </ul>
   </section>
 
   <!-- Footer -->
-  <footer class="container padded text-center subtle">
-    <p>Let’s build something amazing—together!</p>
-    <p><a href="#top">Back to top ↑</a></p>
+  <footer>
+    <p>Inspired by CS 1.6 UI • Built by Sharukeshwar P</p>
+    <button class="cs-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      Back to Top
+    </button>
   </footer>
 
 </body>
